@@ -15,5 +15,12 @@ Hola, aquí es donde subo mis programas hechos durante la clase de programación
 >📁 **Menu_interactivo**
 >    - 📄 [*Un menu con algunas funciones variadas (Suma, Retirar dinero, Gestor de tareas, ...)*](https://github.com/Sebas-p-s/Clases-Python/blob/main/Menu_interactivo/Solucionador%20Problemas%200.2.py)
 
-[![Mi perfil](https://img.shields.io/badge/Mi%20perfil-050505)](https://github.com/Sebas-p-s)
+## MUCHAS GRACIAS
+
+Gracias por entrar a mi repositorio.
+
+![Muchas Gracias](https://media.tenor.com/El89itaAWsIAAAAi/maxwell.gif)
+
+### ACERCA DE MI
+[![Mi perfil](https://img.shields.io/badge/Mi%20perfil-0011ff)](https://github.com/Sebas-p-s) [![Institucion donde estoy aprendiendo](https://img.shields.io/badge/Mi%20institución-ffd000)](https://es.wikipedia.org/wiki/Servicio_Nacional_de_Aprendizaje)
 
