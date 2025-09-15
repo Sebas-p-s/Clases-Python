@@ -3,8 +3,11 @@
 Hola, aquí es donde subo mis programas hechos durante la clase de programación, son ejercicios medianamente basicos.
 
 ## COMPOSICIÓN
+>📁 **Adopta_una_mascota**
+>    - 📄 [*Crea y adopta tu propia mascota basado en tus intereses.*](https://github.com/Sebas-p-s/Clases-Python/blob/main/Adopta_una_mascota/adopta_una_mascota.py)
+>
 >📁 **Gestion_estudiantes**
->    - 📄[*Gestiona notas de los estudiantes en alguna asignatura para hallar su promedio.*](https://github.com/Sebas-p-s/Clases-Python/blob/main/Gestion_estudiantes/Gestor_estudiantes_programa.py)
+>    - 📄 [*Gestiona notas de los estudiantes en alguna asignatura para hallar su promedio.*](https://github.com/Sebas-p-s/Clases-Python/blob/main/Gestion_estudiantes/Gestor_estudiantes_programa.py)
 > 
 >📁 **Gestión_hojas_vida**
 >    - 📄 [*Gestiona datos de un individuo para perfilarlo a una oferta laboral.*](https://github.com/Sebas-p-s/Clases-Python/blob/main/Gestion_hojas_vida/gestion_hojasvida.py)
