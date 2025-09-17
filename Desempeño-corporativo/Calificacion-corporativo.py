@@ -4,8 +4,11 @@ lista_de_los_desempenos = ("Calidad","Puntualidad","Colaboracion","Eficiencia")
 empleados_desempenos = []
 promedios = {}
 lista_promedios = []
+lista_clasificacion = []
+
 def registar_empleados():
     opt_registrar_empleados = True
+    print("Solo podra salir cuando registre minimo 3 empleados")
     while opt_registrar_empleados:
         nombre_empleado = str(input("Ingrese el nombre del empleado: ")).capitalize()
         empleado = {'Nombre' : nombre_empleado}
@@ -23,16 +26,20 @@ def registar_empleados():
                 empleado[i] = respuesta
             empleados_desempenos.append(empleado)
         salir = ""
-        while salir not in ("Si", "No"):
-            salir = str(input("¿Desea salir?(Si/No): ")).capitalize()
-            if salir == "Si":
-                opt_registrar_empleados = False
-                print("Regresando al menu.")
-            elif salir == "No":
-                pass
-            else:
-                print("Respuesta no valida.")
-
+        indice = 0
+        for i in empleados_desempenos:
+            indice += 1
+            if 3 <= indice:
+                while salir not in ("Si", "No"):
+                    salir = str(input("¿Desea salir?(Si/No): ")).capitalize()
+                    if salir == "Si":
+                        opt_registrar_empleados = False
+                        print("Regresando al menu.")
+                    elif salir == "No":
+                        pass
+                    else:
+                        print("Respuesta no valida.")
+##Esta funcion sirve para que se calcule el promedio el cual usaremos despues.
 def calcular_promedios():
     if empleados_desempenos:
         for empleado in empleados_desempenos:
@@ -43,17 +50,31 @@ def calcular_promedios():
             promedio = suma_promedios / len(lista_de_los_desempenos)
             promedio = round(promedio, 1)
             promedios[empleado['Nombre']] = promedio
-            lista_promedios.append(promedio)
-        indi = 0
-        for i in promedios:
-            print(f"{i} : {lista_promedios[indi]}")
-            indi += 1
-                       
+            lista_promedios.append(promedio)                
     else: 
         print("No hay ningun dato")
-
+## Ya con el promedio podremos clasificarlos y guardalos para usarlos despues.        
+def clasificar_desempeno():
+    if not empleados_desempenos:
+        print("No hay ningun empleado registrado")
+    else:
+        calcular_promedios()
+        for i in lista_promedios:
+            if i < 5:
+                clasificado = "Bajo"
+                lista_clasificacion.append(clasificado)
+            elif 5 <= i < 8.5:
+                clasificado = "Aceptable"
+                lista_clasificacion.append(clasificado)
+            elif 8.5 <= i <= 10:
+                clasificado = "Sobresaliente"
+                lista_clasificacion.append(clasificado)
+            print(lista_promedios)
+            print(lista_clasificacion)
+                
+            
 registar_empleados()
-calcular_promedios()
+clasificar_desempeno()
         
         
                     
