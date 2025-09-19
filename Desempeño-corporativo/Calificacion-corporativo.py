@@ -5,6 +5,8 @@ empleados_desempenos = []
 promedios = {}
 lista_promedios = []
 lista_clasificacion = []
+## Creo el opt para usarlo en mi menu
+opt_menu = True
 
 ## Menu para que se puedan ver las opciones en terminal
 menu = ("""
@@ -95,11 +97,23 @@ def reporte_final():
             clasificado = lista_clasificacion[contador]
             print (f"Promedio : {promedio}")
             print (f"Clasificado : {clasificado}")
+            print("")
             contador += 1
         
-                    
+while opt_menu:
+    print(menu)
+    respuesta_menu = int(input("Ingrese el numero del programa que desea acceder: "))
+    if respuesta_menu == 1:
+        registar_empleados()
+    elif respuesta_menu == 2:
+        reporte_final()
+    elif respuesta_menu == 3:
+        opt_menu = False
+        print("Hasta pronto.")
+    else:
+        print("Opcion no valida.")
 
-reporte_final()
+
                 
 
 
