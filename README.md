@@ -6,6 +6,9 @@ Hola, aquí es donde subo mis programas hechos durante la clase de programación
 >📁 **Adopta_una_mascota**
 >    - 📄 [*Crea y adopta tu propia mascota basado en tus intereses.*](https://github.com/Sebas-p-s/Clases-Python/blob/main/Adopta_una_mascota/adopta_una_mascota.py)
 >
+>📂 **Desempeño-corporativo**
+>    - 📄 [*Adjunta la nota de tus trabajadores y el programa te los clasificara automaticamente*](https://github.com/Sebas-p-s/Clases-Python/blob/main/Desempe%C3%B1o-corporativo/Calificacion-corporativo.py)
+>      
 >📁 **Gestion_estudiantes**
 >    - 📄 [*Gestiona notas de los estudiantes en alguna asignatura para hallar su promedio.*](https://github.com/Sebas-p-s/Clases-Python/blob/main/Gestion_estudiantes/Gestor_estudiantes_programa.py)
 > 
