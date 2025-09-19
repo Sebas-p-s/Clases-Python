@@ -6,6 +6,20 @@ promedios = {}
 lista_promedios = []
 lista_clasificacion = []
 
+## Menu para que se puedan ver las opciones en terminal
+menu = ("""
+    ________________________________
+    8                              8
+    | Menu de desempeño de         |
+    8 empleados                    8
+    |______________________________|
+    8                              8           
+    | 1. Registrar empleados       |
+    8 2. Mostrar reporte           8
+    | 3. Salir                     |   
+    8______________________________8   
+        """)
+
 def registar_empleados():
     opt_registrar_empleados = True
     print("Solo podra salir cuando registre minimo 3 empleados")
@@ -55,10 +69,8 @@ def calcular_promedios():
         print("No hay ningun dato")
 ## Ya con el promedio podremos clasificarlos y guardalos para usarlos despues.        
 def clasificar_desempeno():
-    if not empleados_desempenos:
-        print("No hay ningun empleado registrado")
-    else:
-        calcular_promedios()
+    calcular_promedios()
+    if empleados_desempenos:
         for i in lista_promedios:
             if i < 5:
                 clasificado = "Bajo"
@@ -69,15 +81,25 @@ def clasificar_desempeno():
             elif 8.5 <= i <= 10:
                 clasificado = "Sobresaliente"
                 lista_clasificacion.append(clasificado)
-            print(lista_promedios)
-            print(lista_clasificacion)
-                
-            
-registar_empleados()
-clasificar_desempeno()
-        
+
+## Funcion reporte final que sirve para organizar todos los datos que teniamos arriba           
+def reporte_final():
+    clasificar_desempeno()
+    if empleados_desempenos:
+        contador = 0
+        for empleado in empleados_desempenos:
+            print(f"{empleado['Nombre']} tuvo el siguiente desempeño: ")
+            for categoria in lista_de_los_desempenos:
+                print(f" {categoria}: {empleado[categoria]}")
+            promedio = lista_promedios[contador]
+            clasificado = lista_clasificacion[contador]
+            print (f"Promedio : {promedio}")
+            print (f"Clasificado : {clasificado}")
+            contador += 1
         
                     
+
+reporte_final()
                 
 
 
