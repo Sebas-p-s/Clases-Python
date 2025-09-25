@@ -1,5 +1,19 @@
-## Creo mi lista de diccionarios con los datos suministrados.
 
+## Creo el menu visible
+opt_menu = True
+menu =("""
+_____________________________________
+|                                   |
+|Menu de proyeccion poblacional     |
+|                                   |
+|1. Ver los datos suministrasdos    |
+|2. Ver las tasas de crecimiento    |
+|3. Ver las proyecciones            |
+|4. Ver las graficas de proyecciones|
+|5. Salir                           |
+-------------------------------------
+""")
+## Creo mi lista de diccionarios con los datos suministrados.
 datos_suministrados = [ {"Fecha": 2018, "Bogota" :7830, "Antioquia": 6420, "Valle del cauca": 4840},
                         {"Fecha": 2019, "Bogota" :7900, "Antioquia": 6480, "Valle del cauca": 4960},
                         {"Fecha": 2020, "Bogota" :7970, "Antioquia": 6535, "Valle del cauca": 4955},
@@ -58,9 +72,6 @@ def calcular_proyeccion():
     ## Aqui retorna los datos :P
     return datos_calculados
 
-proyecciones = calcular_proyeccion()
-for fila in proyecciones:
-    print(fila)
 
 def graficar():
     import matplotlib.pyplot as plt
@@ -81,4 +92,34 @@ def graficar():
     plt.show()
 
     plt.xticks(fechas)
-graficar()
+
+while opt_menu:
+    print(menu)
+    respuesta = (int(input("Ingrese la opcion escogida: ")))
+    if respuesta == 1:
+        for i in datos_suministrados:
+            print(i)
+    elif respuesta == 2:
+        tasas_calculadas()
+        print(dicci_tasas_calculadas)
+    elif respuesta == 3:
+        if not datos_calculados:  # solo calcular si aún no lo hemos hecho
+            calcular_proyeccion()
+        for fila in datos_calculados:
+            print(fila)
+    elif respuesta == 4:
+        if not datos_calculados:  # solo calcular si aún no lo hemos hecho
+            calcular_proyeccion()
+            graficar()
+        else:
+            graficar()
+    elif respuesta == 5:
+        print("Gracias por usar el programa <3.")
+        opt_menu = False
+    else:
+        print("Respuesta no valida")
+
+
+
+
+
